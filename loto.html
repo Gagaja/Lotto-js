@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loto</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+<body>
+    <header>
+        <div id="regards"></div>
+    </header>
+    <div class="page-content">
+        <div class="lotto">
+            <h2>Upiši najmanji i najveći loto broj</h2>
+            <input type="text" id="min-number">
+            <input type="text" id="max-number">
+            <button id="lotto-btn">Započni izvlačenje</button>
+    <div id="nums"></div>
+    <div id="number"></div>
+        </div>    
+       
+    </div>
+    <script>
+        var date = new Date();
+        var hours = date.getHours();
+        if (hours > 5 && hours < 10) {
+            document.getElementById("regards").innerHTML = "Dobro jutro, vreme je za loto!";
+
+        } else if (hours < 18) {
+            document.getElementById("regards").innerHTML = "Dobar dan, vreme je za loto!";
+
+        }
+        else {
+            document.getElementById("regards").innerHTML = "Dobro veče, vreme je za loto!";
+        }
+        document.getElementById("lotto-btn").addEventListener("click",lotoNums);
+            
+            function lotoNums(minNums, maxNums) {
+                
+                document.getElementById("number").innerHTML = "";
+                minNums = document.getElementById("min-number").value;
+                maxNums = document.getElementById("max-number").value;
+                var num = 0;
+                minNums*= 1000;
+                for (i = 0; i < minNums; i += 1000) {
+                    setTimeout(function () {
+                        for (j = 0; j < 1000; j += 50) {
+                            setTimeout(function () {
+                                num = Math.floor(Math.random() * maxNums + 1);
+                                document.getElementById("nums").innerHTML = num;
+                            }, j);
+                        }
+                        setTimeout(function () {
+                            document.getElementById("number").innerHTML += num + " ";
+                        }, 1000);
+                    }, i);
+                }
+            }
+    
+
+    </script>
+
+</body>
+
+</html>

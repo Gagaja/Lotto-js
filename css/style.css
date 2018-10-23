@@ -1,0 +1,93 @@
+*{ box-sizing:border-box; }
+
+body{
+   background: #bbffff;
+}
+
+header{
+    height: 100px;
+    
+   
+}
+h2{
+    color:#fff; 
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.lotto{
+    text-align: center;
+    padding-top: 30PX;
+}
+input{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-right: 20px;
+    cursor: pointer;
+    background: #017979;
+    color: #fff;
+    font-size: 18px;
+    
+    
+  
+    
+}
+
+button{
+    background: #017979;
+    border: 1px solid #fff;
+    color:#fff;
+    padding: 7px 21px;
+    border-radius: 15px;
+    font-size: 16px;
+}
+button:hover{
+    background: #fff;
+    color: #017979;
+    border: 1px solid #017979;
+}
+#regards{
+    padding-top:15px;
+    text-align: center;
+    font-size: 45px;
+    color: #017979;
+   
+
+}
+  
+  .page-content{
+        height: 800px;
+        background-image: url(../img/suzi.jpeg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+
+    #nums{
+        margin: auto;
+        font-size: 18px;
+        border: 1px solid #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #017979;
+        text-align: center;
+        margin-top:15px;
+        color: #fff;
+        padding-top: 7px;
+    }
+    #number{
+       
+        font-size: 45px;
+       
+    
+        text-align: center;
+        margin-top:15px;
+        margin-right: 10px;
+        color: red;
+        
+    }
